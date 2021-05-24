@@ -21,7 +21,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
     return (
         <View style={styles.container}>
-            <Text>Application onboarding !!!</Text>
+            <Text>application pour un avenir !!!</Text>
             <StatusBar style="auto" />
         </View>
     );

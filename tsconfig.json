@@ -64,7 +64,7 @@
             "ts/*": ["ts/*"]
         }
     },
-    "include": ["sources/*", "package.json", "_locale.json", "App.tsx", ".expo"],
+    "include": ["sources", "package.json", "_locale.json", "App.tsx", ".expo"],
     "exclude": [
         ".gitignore",
         ".eslintignore",
