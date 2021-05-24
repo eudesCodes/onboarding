@@ -9,8 +9,10 @@
         "eslint": "eslint --fix .",
         "format": "prettier --write \"*.{css,js,json,md,ts,tsx}\" \"./**/*.{css,js,json,md,ts,tsx}\"",
         "lint": "yarn format && yarn eslint",
+        "remove:folder": "",
         "transpile": "tsc ts/* --outDir js",
-        "generated:comment": "node  --trace-warnings js/header_comments.js && yarn lint"
+        "generated:comment": "node  --trace-warnings js/header_comments.js && yarn lint",
+        "generated:acknowledgments": "node  --trace-warnings js/acknowledgments.js && yarn lint"
     },
     "dependencies": {
         "expo": "~41.0.1",
@@ -36,7 +38,10 @@
         "typescript": "~4.0.0"
     },
     "files": [
-        "App.tsx"
+        "App.tsx",
+        "ts/header_comments.ts",
+        "ts/acknowledgments.ts",
+        "ACKNOWLEDGMENTS.md"
     ],
     "private": true
 }
