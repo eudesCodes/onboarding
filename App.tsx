@@ -14,24 +14,21 @@
  SOFTWARE.
 */
 
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+/* eslint-disable no-undef */
 
-export default function App() {
-    return (
-        <View style={styles.container}>
-            <Text>application pour un avenir !!!</Text>
-            <StatusBar style="auto" />
-        </View>
-    );
-}
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import styled from 'styled-components/native';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
+// eslint-disable-next-line react/display-name
+export default (): JSX.Element => (
+    <NavigationContainer>
+        <Text>Onboarding!!</Text>
+    </NavigationContainer>
+);
+
+// Add  styles
+// Create a Custom component with styled-components
+
+const Text = styled.Text``;

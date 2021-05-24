@@ -61,6 +61,8 @@
             "models/*": ["sources/models/*"],
             "sources/*": ["sources/sources/*"],
             "theme/*": ["sources/theme/*"],
+            "screens/*": ["sources/screens/*"],
+            "router/*": ["sources/router/*"],
             "ts/*": ["ts/*"]
         }
     },
