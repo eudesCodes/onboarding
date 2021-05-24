@@ -19,16 +19,15 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import styled from 'styled-components/native';
 
+// import stack navigation
+import StackNavigation from 'router/stack';
 // eslint-disable-next-line react/display-name
 export default (): JSX.Element => (
     <NavigationContainer>
-        <Text>Onboarding!!</Text>
+        <StackNavigation />
     </NavigationContainer>
 );
 
 // Add  styles
 // Create a Custom component with styled-components
-
-const Text = styled.Text``;

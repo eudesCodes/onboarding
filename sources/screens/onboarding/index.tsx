@@ -23,7 +23,7 @@ export default ({ navigation }: TOnboardingScreenTypes): JSX.Element => {
     console.log(navigation.toString());
     return (
         <Contenair>
-            <Text>Onboarding Screen</Text>
+            <Text>Onboarding Screen avec la navigation</Text>
         </Contenair>
     );
 };
