@@ -1,0 +1,8 @@
+node_modules
+.git
+.expo
+.expo-shared
+dist
+web-build
+babel.config.js
+assets
