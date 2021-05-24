@@ -61,7 +61,8 @@
         "sources/router/statck/index.tsx",
         "sources/screens/ondoarding/index.tsx",
         "sources/screens/index.ts",
-        "sources/i18n/index.ts"
+        "sources/i18n/index.ts",
+        "sources/sources/index.ts"
     ],
     "private": true
 }
