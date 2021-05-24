@@ -38,7 +38,6 @@ const Contenair = styled.View`
     flex: 1;
     height: 100%;
     flex-direction: column;
-
     /* background-color: #c7c4eb; */
 `;
 

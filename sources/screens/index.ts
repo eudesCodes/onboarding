@@ -1,6 +1,22 @@
+/*
+ Copyright (c) 2020 - 2021 https://eudes.codes/
+ @author: Eudes Evrard BOBBOH - EBO
+ @country: France
+ @email: evrard@eudes.codes
+ @website: https://eudes.codes/
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+*/
+
 // import all screens
 
-import Onboarding from 'sources/screens/onboarding';
+import Onboarding from 'screens/onboarding';
 
 // export all screens
 export { Onboarding as OnboardingScreen };

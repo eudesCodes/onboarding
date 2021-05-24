@@ -1,7 +1,6 @@
 // import some module from node_modules
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import styled from 'styled-components/native';
 
 // import local modules and enums
 import { TScreensParam } from 'models/index';
@@ -22,11 +21,5 @@ export default () => (
             name={ScreensEnum.ONBOARDING_SCREEN}
             component={OnboardingScreen}
         ></StackNavigator.Screen>
-        <StatusBar hidden />
     </StackNavigator.Navigator>
 );
-
-// Add  styles
-// Create a Custom component with styled-components
-
-const StatusBar = styled.StatusBar``;
