@@ -66,6 +66,11 @@
         "sources/screens/index.ts",
         "sources/i18n/index.ts",
         "sources/sources/index.ts",
+        "assets/index.ts",
+        "sources/components/index.ts",
+        "sources/components/@image/index.tsx",
+        "sources/components/@logo/index.tsx",
+        "sources/components/@text/index.tsx",
         "api/index.ts"
     ],
     "private": true

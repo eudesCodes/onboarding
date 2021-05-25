@@ -1,14 +1,18 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 // import some module from node_modules
 import * as React from 'react';
 import { StackNavigationProp } from '@react-navigation/stack';
 import styled from 'styled-components/native';
+import { useWindowDimensions } from 'react-native';
 
 // import local modules and enums
 import { TScreensParam } from 'models/index';
 import { ScreensEnum } from 'enums/index';
 
-import { ENJOIE_LIFE_IMAGE } from 'assets';
+import { ImageFlat, TextFlat } from 'components/index';
+
+import { DELIVERY_SERVICE_IMAGE } from 'assets';
 
 /**
  * @typedef TOnboardingScreenTypes
@@ -22,11 +26,21 @@ type TOnboardingScreenTypes = {
 // function component geos here
 // eslint-disable-next-line react/display-name
 export default ({ navigation }: TOnboardingScreenTypes): JSX.Element => {
-    console.log(navigation.toString());
+    const { width, height } = useWindowDimensions();
     return (
-        <Contenair>
-            <AnimatedImage source={ENJOIE_LIFE_IMAGE} style={{ resizeMode: 'contain' }} />
-            <StatusBar hidden />
+        <Contenair style={{ width, height }}>
+            <AnimatedImage>
+                <ImageFlat attributes={{ url: DELIVERY_SERVICE_IMAGE }} resizeMode="contain" />
+            </AnimatedImage>
+            <AnimatedText>
+                <TextFlat
+                    attributes={{
+                        heading: 'Lorem ipsum',
+                        description:
+                            'Le lorem ipsum est, en imprimerie, une suite de mots Le lorem ipsum est, en imprimerie, une suite de mots',
+                    }}
+                />
+            </AnimatedText>
         </Contenair>
     );
 };
@@ -48,8 +62,15 @@ const Contenair = styled.View`
     width: 100%;
 `;
 
-const AnimatedImage = styled.Image`
+const AnimatedImage = styled.SafeAreaView`
     flex: 1;
+    position: relative;
 `;
 
-const StatusBar = styled.StatusBar``;
+const AnimatedText = styled.SafeAreaView`
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    width: auto;
+    margin: 0 10px 0 40px;
+`;

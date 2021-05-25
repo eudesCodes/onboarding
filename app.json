@@ -4,16 +4,9 @@
         "slug": "onboarding",
         "version": "1.0.0",
         "splash": {
-            "image": "./assets/splash/splash.png",
-            "resizeMode": "contain",
-            "backgroundColor": "#7451eb"
-        },
-        "updates": {
-            "fallbackToCacheTimeout": 0
-        },
-        "assetBundlePatterns": ["**/*"],
-        "ios": {
-            "supportsTablet": true
+            "image": "./assets/splash/splash.jpeg",
+            "resizeMode": "cover",
+            "backgroundColor": "#ffffff"
         },
         "platforms": ["android", "ios", "web"]
     }

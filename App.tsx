@@ -19,6 +19,7 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import styled from 'styled-components/native';
 
 // import stack navigation
 import StackNavigation from 'router/stack';
@@ -26,8 +27,11 @@ import StackNavigation from 'router/stack';
 export default (): JSX.Element => (
     <NavigationContainer>
         <StackNavigation />
+        <StatusBar hidden />
     </NavigationContainer>
 );
 
 // Add  styles
 // Create a Custom component with styled-components
+
+const StatusBar = styled.StatusBar``;

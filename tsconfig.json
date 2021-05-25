@@ -64,7 +64,7 @@
             "theme/*": ["sources/theme/*"],
             "screens/*": ["sources/screens/*"],
             "router/*": ["sources/router/*"],
-            "components/*":["sourcescomponents/*"],
+            "components/*":["sources/components/*"],
             "ts/*": ["ts/*"],
             "assets/*": ["assets/*"],
             "api/*":["api/*"],
