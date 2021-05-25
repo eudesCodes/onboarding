@@ -65,7 +65,8 @@
         "sources/screens/ondoarding/index.tsx",
         "sources/screens/index.ts",
         "sources/i18n/index.ts",
-        "sources/sources/index.ts"
+        "sources/sources/index.ts",
+        "api/index.ts"
     ],
     "private": true
 }

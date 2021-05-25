@@ -8,6 +8,8 @@ import styled from 'styled-components/native';
 import { TScreensParam } from 'models/index';
 import { ScreensEnum } from 'enums/index';
 
+import { ENJOIE_LIFE_IMAGE } from 'assets';
+
 /**
  * @typedef TOnboardingScreenTypes
  * @type { object }
@@ -23,7 +25,8 @@ export default ({ navigation }: TOnboardingScreenTypes): JSX.Element => {
     console.log(navigation.toString());
     return (
         <Contenair>
-            <Text>Onboarding Screen avec la navigation</Text>
+            <AnimatedImage source={ENJOIE_LIFE_IMAGE} style={{ resizeMode: 'contain' }} />
+            <StatusBar hidden />
         </Contenair>
     );
 };
@@ -36,9 +39,17 @@ const Contenair = styled.View`
     position: relative;
     background-color: white;
     flex: 1;
+    display: flex;
     height: 100%;
     flex-direction: column;
-    /* background-color: #c7c4eb; */
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    width: 100%;
 `;
 
-const Text = styled.Text``;
+const AnimatedImage = styled.Image`
+    flex: 1;
+`;
+
+const StatusBar = styled.StatusBar``;

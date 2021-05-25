@@ -56,15 +56,19 @@
         // "experimentalDecorators": true,        // Enables experimental support for ES7 decorators.
         // "emitDecoratorMetadata": true,         // Enables experimental support for emitting type metadata for decorators.
         "paths": {
-            "enums/*": ["./sources/enums/*"],
-            "assets/*": ["./sources/assets/*"],
-            "i18n/*": ["./sources/i18n/*"],
-            "models/*": ["./sources/models/*"],
-            "sources/*": ["./sources/sources/*"],
-            "theme/*": ["./sources/theme/*"],
-            "screens/*": ["./sources/screens/*"],
-            "router/*": ["./sources/router/*"],
-            "ts/*": ["./ts/*"]
+            "enums/*": ["sources/enums/*"],
+            
+            "i18n/*": ["sources/i18n/*"],
+            "models/*": ["sources/models/*"],
+            "sources/*": ["sources/sources/*"],
+            "theme/*": ["sources/theme/*"],
+            "screens/*": ["sources/screens/*"],
+            "router/*": ["sources/router/*"],
+            "components/*":["sourcescomponents/*"],
+            "ts/*": ["ts/*"],
+            "assets/*": ["assets/*"],
+            "api/*":["api/*"],
+            
         }
     },
     "include": ["sources", "package.json", "_locale.json", "App.tsx", ".expo"],
