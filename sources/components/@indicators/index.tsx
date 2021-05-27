@@ -28,20 +28,26 @@ import { Animated } from 'react-native';
  */
 type TIndicatorsType = {
     attributes: {
-        scrollX?: Animated.Value;
+        scrollX: Animated.Value;
         slides: any[];
+        width: number;
     };
 };
 
 // function component geos here
 // eslint-disable-next-line react/display-name
-export default ({ attributes: { slides } }: TIndicatorsType): JSX.Element => {
+export default ({ attributes: { slides, scrollX, width } }: TIndicatorsType): JSX.Element => {
     // import font
 
     return (
         <IndicatorsContenair>
             {slides?.map((_: any, index: number) => {
-                return <AnimatedView key={index.toString()} />;
+                const dotWidth = scrollX.interpolate({
+                    inputRange: [(index - 1) * width, index * width, (index + 1) * width],
+                    outputRange: [8, 20, 8],
+                    extrapolate: 'clamp',
+                });
+                return <AnimatedView key={index.toString()} style={{ width: dotWidth }} />;
             })}
         </IndicatorsContenair>
     );

@@ -76,7 +76,7 @@ export default ({ navigation }: TOnboardingScreenTypes): JSX.Element => {
             />
 
             <AnimatedIndicator>
-                <Indicators attributes={{ slides, scrollX }} />
+                <Indicators attributes={{ slides, scrollX, width }} />
             </AnimatedIndicator>
         </Contenair>
     );
