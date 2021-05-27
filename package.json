@@ -71,6 +71,8 @@
         "sources/components/@image/index.tsx",
         "sources/components/@logo/index.tsx",
         "sources/components/@text/index.tsx",
+        "sources/components/@ticker/index.tsx",
+        "sources/components/@indicators/index.tsx",
         "api/index.ts"
     ],
     "private": true

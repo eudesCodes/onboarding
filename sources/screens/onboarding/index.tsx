@@ -11,7 +11,6 @@ import { TScreensParam } from 'models/index';
 import { ScreensEnum } from 'enums/index';
 
 import { ImageFlat, TextFlat, Ticker, Indicators } from 'components/index';
-
 import { CONNECTED_EARTH_IMAGE } from 'assets';
 
 /**
