@@ -22,21 +22,21 @@ const slides = [
         heading: 'Connected earth',
         description: 'Le lorem ipsum est, en imprimerie, une suite de mots',
         url: CONNECTED_EARTH_IMAGE,
-        color: '#92E3A9',
+        color: '#6FD98B',
     },
     {
         id: 2,
         heading: 'Social life',
         description: 'Le lorem ipsum est, en imprimerie, une suite de mots',
         url: SOCIAL_LIFE_SERVICE_IMAGE,
-        color: '#FF725E',
+        color: '#6FD98B',
     },
     {
         id: 3,
         heading: 'Live call',
         description: 'Le lorem ipsum est, en imprimerie, une suite de mots',
         url: LIVE_CALL_SERVICE_IMAGE,
-        color: '#4E98ED',
+        color: '#6FD98B',
     },
 ];
 

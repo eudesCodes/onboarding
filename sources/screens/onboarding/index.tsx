@@ -40,7 +40,7 @@ export default ({ navigation }: TOnboardingScreenTypes): JSX.Element => {
     return (
         <Contenair style={{ width, height }}>
             <AnimatedTicker>
-                <Ticker attributes={{ title: 'Lorem ipsum ' }} />
+                <Ticker attributes={{ slides, scrollX, width }} />
             </AnimatedTicker>
             <Animated.FlatList
                 data={slides}
@@ -116,6 +116,8 @@ const AnimatedTicker = styled.SafeAreaView`
     z-index: 10;
     width: auto;
     margin: 0 10%;
+    overflow: hidden;
+    height: 40px;
 `;
 
 const AnimatedIndicator = styled.SafeAreaView`

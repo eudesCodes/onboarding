@@ -20,7 +20,7 @@ import styled from 'styled-components/native';
 import { Animated } from 'react-native';
 import { useFonts } from '@use-expo/font'; // useFonts Hooks
 import AppLoading from 'expo-app-loading';
-import { ROBOTO_MEDIUM } from 'assets'; // import Fonts
+import { ROBOTO_BOLD } from 'assets'; // import Fonts
 
 import { Text as Font } from 'theme/index';
 
@@ -33,27 +33,46 @@ import { Text as Font } from 'theme/index';
  */
 type TTickerType = {
     attributes: {
-        title?: string;
-        scrollX?: Animated.Value;
-        index?: number;
+        scrollX: Animated.Value;
+        slides: any[];
+        width: number;
     };
 };
 
 // function component geos here
 // eslint-disable-next-line react/display-name
-export default ({ attributes }: TTickerType): JSX.Element => {
+export default ({ attributes: { slides, scrollX, width } }: TTickerType): JSX.Element => {
     // import font
     let [fontsLoaded] = useFonts({
-        'Roboto-medium': ROBOTO_MEDIUM,
+        'Roboto-bold': ROBOTO_BOLD,
     });
 
     if (!fontsLoaded) return <AppLoading />;
 
     return (
         <TickerContenair>
-            <Font title style={{ fontFamily: 'Roboto-medium' }}>
-                {attributes?.title}
-            </Font>
+            {slides?.map((item: any, key: number) => {
+                // // translateY value
+                const translateY = scrollX.interpolate({
+                    inputRange: [-width, 0, width],
+                    outputRange: [40, 0, -40],
+                });
+
+                return (
+                    <Font
+                        color={item?.color}
+                        title
+                        key={key.toString()}
+                        style={{
+                            transform: [{ translateY }],
+                            fontFamily: 'Roboto-bold',
+                            lineHeight: 40,
+                        }}
+                    >
+                        {item?.heading}
+                    </Font>
+                );
+            })}
         </TickerContenair>
     );
 };
