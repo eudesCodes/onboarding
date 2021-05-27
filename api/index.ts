@@ -14,40 +14,28 @@
  SOFTWARE.
 */
 
-import {
-    MOBILE_PAIEMENT_IMAGE,
-    ONLINE_MOBILE_PAIEMENT_IMAGE,
-    SHARED_PAIEMENT_IMAGE,
-    ENJOIE_LIFE_IMAGE,
-} from 'assets';
+import { CONNECTED_EARTH_IMAGE, SOCIAL_LIFE_SERVICE_IMAGE, LIVE_CALL_SERVICE_IMAGE } from 'assets';
 
 const slides = [
     {
         id: 1,
-        heading: 'Lorem ipsum',
+        heading: 'Connected earth',
         description: 'Le lorem ipsum est, en imprimerie, une suite de mots',
-        url: MOBILE_PAIEMENT_IMAGE,
+        url: CONNECTED_EARTH_IMAGE,
         color: '#92E3A9',
     },
     {
         id: 2,
-        heading: 'Lorem ipsum',
+        heading: 'Social life',
         description: 'Le lorem ipsum est, en imprimerie, une suite de mots',
-        url: ONLINE_MOBILE_PAIEMENT_IMAGE,
+        url: SOCIAL_LIFE_SERVICE_IMAGE,
         color: '#FF725E',
     },
     {
         id: 3,
-        heading: 'Lorem ipsum',
+        heading: 'Live call',
         description: 'Le lorem ipsum est, en imprimerie, une suite de mots',
-        url: ENJOIE_LIFE_IMAGE,
-        color: '#4E98ED',
-    },
-    {
-        id: 4,
-        heading: 'Lorem ipsum',
-        description: 'Le lorem ipsum est, en imprimerie, une suite de mots',
-        url: SHARED_PAIEMENT_IMAGE,
+        url: LIVE_CALL_SERVICE_IMAGE,
         color: '#4E98ED',
     },
 ];

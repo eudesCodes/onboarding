@@ -4,11 +4,12 @@
 import * as React from 'react';
 import { StackNavigationProp } from '@react-navigation/stack';
 import styled from 'styled-components/native';
-import { useWindowDimensions } from 'react-native';
+import { useWindowDimensions, Animated } from 'react-native';
 
 // import local modules and enums
 import { TScreensParam } from 'models/index';
 import { ScreensEnum } from 'enums/index';
+import { slides } from 'api';
 
 import { ImageFlat, TextFlat, Ticker, Indicators } from 'components/index';
 import { CONNECTED_EARTH_IMAGE } from 'assets';
@@ -25,25 +26,57 @@ type TOnboardingScreenTypes = {
 // function component geos here
 // eslint-disable-next-line react/display-name
 export default ({ navigation }: TOnboardingScreenTypes): JSX.Element => {
+    /**
+     * Get device image
+     */
     const { width, height } = useWindowDimensions();
+
+    /**
+     * @constant
+     * @name scrollX
+     */
+    const scrollX: Animated.Value = React.useRef(new Animated.Value(0)).current;
+
     return (
         <Contenair style={{ width, height }}>
             <AnimatedTicker>
                 <Ticker attributes={{ title: 'Lorem ipsum ' }} />
             </AnimatedTicker>
-            <AnimatedImage>
-                <ImageFlat attributes={{ url: CONNECTED_EARTH_IMAGE }} resizeMode="contain" />
-            </AnimatedImage>
-            <AnimatedText>
-                <TextFlat
-                    attributes={{
-                        description:
-                            'Le lorem ipsum est, en imprimerie, une suite de mots Le lorem ipsum est, en imprimerie, une suite de mots',
-                    }}
-                />
-            </AnimatedText>
+            <Animated.FlatList
+                data={slides}
+                renderItem={({ item, index }: any) => {
+                    return (
+                        <Contenair style={{ width, height }}>
+                            <AnimatedImage>
+                                <ImageFlat
+                                    attributes={{
+                                        ...item,
+                                        index,
+                                        width,
+                                        scrollX,
+                                        resizeMode: 'contain',
+                                    }}
+                                />
+                            </AnimatedImage>
+                            <AnimatedText>
+                                <TextFlat attributes={{ ...item, index, scrollX }} />
+                            </AnimatedText>
+                        </Contenair>
+                    );
+                }}
+                keyExtractor={(item: any) => item.id.toString()}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                pagingEnabled
+                bounces={false}
+                scrollEventThrottle={32}
+                onScroll={Animated.event([{ nativeEvent: { contentOffset: { x: scrollX } } }], {
+                    useNativeDriver: false,
+                })}
+            />
+
             <AnimatedIndicator>
-                <Indicators attributes={{ slides: [1, 1, 2] }} />
+                <Indicators attributes={{ slides, scrollX }} />
             </AnimatedIndicator>
         </Contenair>
     );

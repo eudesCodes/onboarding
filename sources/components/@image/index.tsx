@@ -28,18 +28,33 @@ import { Animated } from 'react-native';
  */
 type TImageType = {
     attributes: {
-        url?: any;
-        scrollX?: Animated.Value;
-        index?: number;
+        url: any;
+        scrollX: Animated.Value;
+        index: number;
+        width: number;
+        resizeMode: 'cover' | 'contain' | 'stretch' | 'repeat' | 'center';
     };
-    width?: string | number | Animated.Value | Animated.AnimatedInterpolation;
-    resizeMode: 'cover' | 'contain' | 'stretch' | 'repeat' | 'center';
 };
 
 // function component geos here
 // eslint-disable-next-line react/display-name
-export default ({ attributes: { url }, resizeMode, width }: TImageType): JSX.Element => {
-    return <AnimatedImage source={url} style={{ resizeMode, width }} />;
+export default ({
+    attributes: { url, index, scrollX, width, resizeMode },
+}: TImageType): JSX.Element => {
+    /**
+     * Get device image
+     */
+
+    // inputRange
+    const inputRange = [(index - 1) * width, index * width, (index + 1) * width];
+
+    // scale value
+    const scale = scrollX.interpolate({
+        inputRange,
+        outputRange: [0, 1, 0],
+        extrapolate: 'clamp',
+    });
+    return <AnimatedImage source={url} style={{ resizeMode, width, transform: [{ scale }] }} />;
 };
 
 // Create a AnimatedImage component that'll render a <Image> tag with some styles
