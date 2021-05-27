@@ -57,18 +57,16 @@
         // "emitDecoratorMetadata": true,         // Enables experimental support for emitting type metadata for decorators.
         "paths": {
             "enums/*": ["sources/enums/*"],
-            
             "i18n/*": ["sources/i18n/*"],
             "models/*": ["sources/models/*"],
             "sources/*": ["sources/sources/*"],
             "theme/*": ["sources/theme/*"],
             "screens/*": ["sources/screens/*"],
             "router/*": ["sources/router/*"],
-            "components/*":["sources/components/*"],
+            "components/*": ["sources/components/*"],
             "ts/*": ["ts/*"],
             "assets/*": ["assets/*"],
-            "api/*":["api/*"],
-            
+            "api/*": ["api/*"]
         }
     },
     "include": ["sources", "package.json", "_locale.json", "App.tsx", ".expo"],
