@@ -10,9 +10,9 @@ import { useWindowDimensions } from 'react-native';
 import { TScreensParam } from 'models/index';
 import { ScreensEnum } from 'enums/index';
 
-import { ImageFlat, TextFlat } from 'components/index';
+import { ImageFlat, TextFlat, Ticker, Indicators } from 'components/index';
 
-import { DELIVERY_SERVICE_IMAGE } from 'assets';
+import { CONNECTED_EARTH_IMAGE } from 'assets';
 
 /**
  * @typedef TOnboardingScreenTypes
@@ -29,23 +29,26 @@ export default ({ navigation }: TOnboardingScreenTypes): JSX.Element => {
     const { width, height } = useWindowDimensions();
     return (
         <Contenair style={{ width, height }}>
+            <AnimatedTicker>
+                <Ticker attributes={{ title: 'Lorem ipsum ' }} />
+            </AnimatedTicker>
             <AnimatedImage>
-                <ImageFlat attributes={{ url: DELIVERY_SERVICE_IMAGE }} resizeMode="contain" />
+                <ImageFlat attributes={{ url: CONNECTED_EARTH_IMAGE }} resizeMode="contain" />
             </AnimatedImage>
             <AnimatedText>
                 <TextFlat
                     attributes={{
-                        heading: 'Lorem ipsum',
                         description:
                             'Le lorem ipsum est, en imprimerie, une suite de mots Le lorem ipsum est, en imprimerie, une suite de mots',
                     }}
                 />
             </AnimatedText>
+            <AnimatedIndicator>
+                <Indicators attributes={{ slides: [1, 1, 2] }} />
+            </AnimatedIndicator>
         </Contenair>
     );
 };
-
-// export { OnboardingScreen as default };
 
 // Add  styles
 // Create a Contenair component that'll render a <View> tag with some styles
@@ -69,8 +72,27 @@ const AnimatedImage = styled.SafeAreaView`
 
 const AnimatedText = styled.SafeAreaView`
     position: absolute;
-    bottom: 20px;
+    bottom: 10%;
     z-index: 10;
     width: auto;
-    margin: 0 10px 0 40px;
+    margin: 0 10%;
+`;
+
+const AnimatedTicker = styled.SafeAreaView`
+    position: absolute;
+    top: 10%;
+    z-index: 10;
+    width: auto;
+    margin: 0 10%;
+`;
+
+const AnimatedIndicator = styled.SafeAreaView`
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    padding-right: 20px;
 `;

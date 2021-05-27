@@ -22,8 +22,8 @@ type TImageType = {
 
 // function component geos here
 // eslint-disable-next-line react/display-name
-export default ({ attributes, resizeMode, width }: TImageType): JSX.Element => {
-    return <AnimatedImage source={attributes?.url} style={{ resizeMode, width }} />;
+export default ({ attributes: { url }, resizeMode, width }: TImageType): JSX.Element => {
+    return <AnimatedImage source={url} style={{ resizeMode, width }} />;
 };
 
 // Create a AnimatedImage component that'll render a <Image> tag with some styles

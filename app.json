@@ -4,8 +4,8 @@
         "slug": "onboarding",
         "version": "1.0.0",
         "splash": {
-            "image": "./assets/splash/splash.jpeg",
-            "resizeMode": "cover",
+            "image": "./assets/splash/splash.png",
+            "resizeMode": "contain",
             "backgroundColor": "#ffffff"
         },
         "platforms": ["android", "ios", "web"]

@@ -2,12 +2,14 @@
 
 // Images
 
-const ONLINE_PAIEMENT_IMAGE = require('./images/online_paiement.png');
-const DELIVERY_SERVICE_IMAGE = require('./images/delivery_services.png');
+const CONNECTED_EARTH_IMAGE = require('./images/connected_earth.png');
+const SOCIAL_LIFE_SERVICE_IMAGE = require('./images/social_life_service.png');
+const SOCIAL_LIFE_SERVICE_IMAGE_BLUE = require('./images/social_life_service_blue.png');
+const LIVE_CALL_SERVICE_IMAGE = require('./images/live_call_service.png');
 
 
 
-export { ONLINE_PAIEMENT_IMAGE , DELIVERY_SERVICE_IMAGE } // export image
+export { CONNECTED_EARTH_IMAGE ,SOCIAL_LIFE_SERVICE_IMAGE_BLUE, SOCIAL_LIFE_SERVICE_IMAGE, LIVE_CALL_SERVICE_IMAGE } // export image
 
 
 
