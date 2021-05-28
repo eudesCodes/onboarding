@@ -12,7 +12,6 @@ import { ScreensEnum } from 'enums/index';
 import { slides } from 'api';
 
 import { ImageFlat, TextFlat, Ticker, Indicators } from 'components/index';
-import { CONNECTED_EARTH_IMAGE } from 'assets';
 
 /**
  * @typedef TOnboardingScreenTypes
